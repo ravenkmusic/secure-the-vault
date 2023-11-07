@@ -4,7 +4,7 @@ Step Three: Create alert to invite user to open the vault and display the combin
 Step Four: Initialize three variables to serve as the equations
 to generate the combination
 Step Five: Create text field so that user can enter each number one at a time.
-Step Six: Create functions retrieve input and to alert user whether or not the combination is entered successfully.
+Step Six: Create functions to retrieve input and to alert user whether or not the combination is entered successfully.
 */
 
 const inviteMessage = alert("You have received this message because you have been chosen to open an important vault. Here is the secret combination: 10 - 40 - 39."); //alerting user to enter combination
