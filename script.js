@@ -7,30 +7,32 @@ Step Five: Create text field so that user can enter each number one at a time.
 Step Six: Create functions to retrieve input and to alert user whether or not the combination is entered successfully.
 */
 
-const inviteMessage = alert("You have received this message because you have been chosen to open an important vault. Here is the secret combination: 10 - 40 - 39."); //alerting user to enter combination
+const inviteMessage = alert("You have received this message because you have been chosen to open an important vault. Here is the secret combination: 10 - 40 - 39."); 
+// alerting user to enter combination
 
-document.getElementById('combination').addEventListener('submit', retrieveInput);
+document.getElementById('combination').addEventListener('submit', retrieveInput); 
+// when the submit button is pressed by the user, it will run the retrieveInput function
 
 function retrieveInput(){
-    const first = document.getElementById('first').value; //retrieves input from first field
-    const second = document.getElementById('second').value; //retrieves input from second field
-    const third = document.getElementById('third').value; //retrieves input from third field
-    console.log(first); //logs user input from first field
-    console.log(second); //logs user input from second field
-    console.log(third); //logs user input from third field
+    const first = document.getElementById('first').value; // retrieves input from first field
+    const second = document.getElementById('second').value; // retrieves input from second field
+    const third = document.getElementById('third').value; // retrieves input from third field
+    console.log(first); // logs user input from first field
+    console.log(second); // logs user input from second field
+    console.log(third); // logs user input from third field
 
-    openOrShutVault(first, second, third); //calls function using the input values
+    openOrShutVault(first, second, third); //calls function passing the user's input as the parameters
 }
 
 function openOrShutVault (first, second, third){
     //verifies if user input is the correct combination
 
-    const firstNumber = 5 * 2; //equation for first number
+    const firstNumber = 5 * 2; // equation for first number
     const secondNumber = 8 * 5; // equation for second number
     const thirdNumber = 13 * 3; // equation for third number
         if (first == firstNumber && second == secondNumber && third == thirdNumber){
-            alert("Correct! You've opened the vault!");
+            alert("Correct! You've opened the vault!"); //lets user know that their input was correct; refreshes the page
         } else {
-            alert("Not quite. Try again.");
+            alert("Not quite. Try again."); //lets user know that their input was incorrect; refreshes the page
         }
 }
